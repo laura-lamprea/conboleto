@@ -21,7 +21,7 @@ const Card = ({event}: any) => {
 					alt={event.alt}
 					className="w-full h-[342px] rounded-xl rounded-b-none"
 				/>
-				<div className="absolute h-14 top-0 w-full bg-gradient-to-b from-slate-900 to-transparent "></div>
+				<div className="absolute rounded-xl h-14 top-0 w-full bg-gradient-to-b from-slate-900 to-transparent "></div>
 
 				<div className="absolute top-3 right-3 items-center">
 					<div className="w-11 h-[37px] text-rose-600 text-[32px] font-bold">

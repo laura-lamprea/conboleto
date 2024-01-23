@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/assets/figmaIcons/Search.js", "src/components/sections/popular-events/PopularEvents.tsx", "src/assets/figmaIcons/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/assets/figmaIcons/Search.tsx", "src/components/sections/popular-events/PopularEvents.tsx", "src/assets/figmaIcons/index.ts"],
   "exclude": ["node_modules"]
 }

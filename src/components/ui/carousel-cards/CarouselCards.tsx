@@ -69,7 +69,7 @@ export const CarouselCards = ({ data }: { data: any }) => {
 			className="ml-16 mr-24 xl:pl-[calc(5%)] lg:pl-[calc(10%)] md:pl-[calc(23%)] sm:pl-[calc(12%)]"
 		>
 			{data.map((item: any, index: number) => (
-				<Link href={`/`} key={index}>
+				<Link href={`/${item.id}`} key={index}>
 					<Card event={item} />
 				</Link>
 			))}

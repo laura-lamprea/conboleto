@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/images/logo.png";
 import { IoSearchOutline } from "react-icons/io5";
-
+import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 export const NavbarTop = () => {
 	return (
@@ -35,14 +35,16 @@ export const NavbarTop = () => {
 				</form>
 			</div>
 
-			<div className="hidden md:flex space-x-5">
-				<button className="text-white text-base mx-5">Soporte</button>
-				<button className="w-[157px] h-12 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
+			<div className="flex space-x-5">
+				<button className="hidden lg:inline-block text-white text-base mx-5">
+					Soporte
+				</button>
+				<button className="hidden lg:inline-block w-[157px] h-12 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Crea tu evento
 				</button>
-				<button className="w-[157px] h-12 bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
+				<ConboletoButton width={"[157px]"} height={"12"}>
 					Iniciar sesión
-				</button>
+				</ConboletoButton>
 			</div>
 		</nav>
 	);

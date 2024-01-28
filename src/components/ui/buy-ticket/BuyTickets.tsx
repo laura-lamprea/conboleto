@@ -1,7 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 const BuyTickets = () => {
+	const router = useRouter();
 	const [purchase, setPurchase] = useState({ general: 0, vip: 0, meet: 0 });
 
 	const increment = (name: keyof typeof purchase) => {
@@ -22,6 +25,7 @@ const BuyTickets = () => {
 
 	const submit = () => {
 		console.log("purchase ", purchase);
+		router.push("/invoice");
 	};
 
 	return (
@@ -120,7 +124,6 @@ const BuyTickets = () => {
 					</button>
 				</div>
 			</div>
-		
 
 			<div className="flex justify-between items-center px-8 py-6 xl:flex-col xl:items-start ">
 				<div className="-space-y-2 xl:mt-4 xl:mb-5 ">
@@ -137,12 +140,13 @@ const BuyTickets = () => {
 					</span>
 				</div>
 
-				<button
+				<ConboletoButton
+					width={"[331px]"}
 					onClick={submit}
-					className="w-[331px] h-[52px] self-center bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px] "
+					className="self-center"
 				>
 					Comprar boletos
-				</button>
+				</ConboletoButton>
 			</div>
 		</div>
 	);

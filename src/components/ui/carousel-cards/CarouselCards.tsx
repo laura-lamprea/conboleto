@@ -30,7 +30,7 @@ export const CarouselCards = ({ data }: { data: any }) => {
 	const settings = {
 		infinite: true,
 		autoplay: true,
-		centerPadding: "700px",
+		// centerPadding: "700px",
 		slidesToShow: 4,
 		// slidesToScroll: 3,
 		speed: 1000,

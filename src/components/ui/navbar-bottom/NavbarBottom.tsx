@@ -4,18 +4,18 @@ import React from "react";
 export const NavbarBottom = () => {
 	return (
 		<div className="flex items-center w-full h-14 px-16 space-x-10 bg-gradient-to-r from-rose-600 to-fuchsia-800">
-             <Link href={"/"}>
+             <Link href={"/popular"}>
                 Popular
             </Link>
-             <Link href={"/"}>
+             <Link href={"/sports"}>
                 Deportes
             </Link>
-             <Link href={"/"}>
+             {/* <Link href={"/theater"}>
                 Teatro
             </Link>
-             <Link href={"/"}>
+             <Link href={"/concerts"}>
                 Conciertos
-            </Link>
+            </Link> */}
         </div>
 	);
 };

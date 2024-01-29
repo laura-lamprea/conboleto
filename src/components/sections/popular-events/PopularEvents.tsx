@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import "../../../app/globals.css";
-import { eventFont } from "../../../config/fonts";
-import { eventsPopular } from "../../../mocks/events";
+import { eventFont } from "@/config/fonts";
+import { eventsPopular } from "@/mocks/events";
 import CarouselCards from "@/components/ui/carousel-cards/CarouselCards";
 
 export const PopularEvents = () => {
@@ -13,7 +12,7 @@ export const PopularEvents = () => {
 				<p className={`${eventFont.className} text-rose-600 text-[26px] font-normal lg:text-4xl italic`}>
 					EVENTOS POPULARES
 				</p>
-				<Link href={"/"} className={`text-rose-600 text-xl ml-6 mt-1`}>
+				<Link href={"/popular"} className={`text-rose-600 text-xl ml-6 mt-1`}>
 					Ver todos
 				</Link>
 			</div>

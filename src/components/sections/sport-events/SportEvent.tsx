@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "../../../app/globals.css";
 import { eventsSpectacular } from "@/mocks/events";
 import { eventFont } from "@/config/fonts";
 import CarouselCards from "@/components/ui/carousel-cards/CarouselCards";
@@ -16,13 +15,13 @@ export const SportEvent = () => {
 					<p className={`${eventFont.className} pl-[123px] text-4xl italic`}>
 						EVENTOS DEPORTIVOS
 					</p>
-					<Link href={"/"} className={`text-xl ml-6 mt-1`}>
+					<Link href={"/sports"} className={`text-xl ml-6 mt-1`}>
 						Ver todos
 					</Link>
 				</div>
 				<Image
 					src={sport}
-					alt={"spectacular events"}
+					alt={"sports events"}
 					className="block h-[120px] w-full"
 				/>
 			</div>

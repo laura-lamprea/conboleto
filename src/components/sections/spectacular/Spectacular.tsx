@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "../../../app/globals.css";
 import { eventsSpectacular } from "@/mocks/events";
 import { eventFont } from "@/config/fonts";
 import CarouselCards from "@/components/ui/carousel-cards/CarouselCards";

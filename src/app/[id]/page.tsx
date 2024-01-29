@@ -73,8 +73,6 @@ const Detail = () => {
 		// console.log("map: ", map);
 	};
 
-
-
 	return (
 		<div className="">
 			<div className="relative flex w-full h-[580px]">

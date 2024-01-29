@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/images/logo.png";
 import { IoSearchOutline } from "react-icons/io5";
-import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 export const NavbarTop = () => {
 	return (
@@ -13,16 +12,15 @@ export const NavbarTop = () => {
 				<Link href={"/"}>
 					<Image src={logo} alt="conboleto_img" className="h-12" />
 				</Link>
-				{/* <div className="w-[410px] h-12 bg-white bg-opacity-10 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]" /> */}
 				<form>
-					<div className="relative">
+					<div className="relative hidden md:block">
 						<div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
 							<IoSearchOutline />
 						</div>
 						<input
 							type="search"
 							id="default-search"
-							className="w-[410px] h-12 bg-white p-4 ps-10 text-sm bg-opacity-10 rounded-lg border border-white border-opacity-30 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							className="sm:w-[410px] h-12 bg-white p-4 ps-10 text-sm bg-opacity-10 rounded-lg border border-white border-opacity-30 focus:ring-blue-500 focus:border-blue-5000"
 							placeholder="Buscar evento, artista o lugar"
 							required
 							onKeyDown={(event) => {

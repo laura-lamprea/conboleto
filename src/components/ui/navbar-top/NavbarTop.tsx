@@ -39,12 +39,12 @@ export const NavbarTop = () => {
 				<button className="hidden lg:inline-block text-white text-base mx-5">
 					Soporte
 				</button>
-				<button className="hidden lg:inline-block w-[157px] h-12 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
+				<button className="hidden lg:inline-block w-[157px] h-12  my-8 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Crea tu evento
 				</button>
-				<ConboletoButton width={"[157px]"} height={"12"}>
+				<button className="w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Iniciar sesión
-				</ConboletoButton>
+				</button>
 			</div>
 		</nav>
 	);

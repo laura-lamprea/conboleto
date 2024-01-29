@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import cardMethod from "@/assets/images/card-method.png";
-import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 const SaleFormStep2 = () => {
 	const [selectedOption, setSelectedOption] = useState("option1");
@@ -45,10 +44,12 @@ const SaleFormStep2 = () => {
 				</label>
 				<Image src={cardMethod} alt="cardMethod" />
 			</div>
-
-			<ConboletoButton onClick={handleSubmit} className="my-8">
+			<button
+				className="w-full h-[52px] my-8 bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]"
+				onClick={handleSubmit}
+			>
 				Pay
-			</ConboletoButton>
+			</button>
 		</div>
 	);
 };

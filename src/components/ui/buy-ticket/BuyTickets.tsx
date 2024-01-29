@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 const BuyTickets = () => {
 	const router = useRouter();
@@ -139,14 +138,12 @@ const BuyTickets = () => {
 						Cargos por servicio incluido
 					</span>
 				</div>
-
-				<ConboletoButton
-					width={"[331px]"}
+				<button
+					className="h-[52px] w-[331px] self-center bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]"
 					onClick={submit}
-					className="self-center"
 				>
 					Comprar boletos
-				</ConboletoButton>
+				</button>
 			</div>
 		</div>
 	);

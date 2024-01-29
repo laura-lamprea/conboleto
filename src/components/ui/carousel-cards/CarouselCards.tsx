@@ -30,30 +30,28 @@ export const CarouselCards = ({ data }: { data: any }) => {
 	const settings = {
 		infinite: true,
 		autoplay: true,
-		// centerPadding: "700px",
 		slidesToShow: 4,
-		// slidesToScroll: 3,
 		speed: 1000,
 		autoplaySpeed: 2500,
 		cssEase: "linear",
 		responsive: [
 			{
-				breakpoint: 1696,
+				breakpoint: 1290,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 2,
+					slidesToScroll: 3,
 					infinite: true,
 				},
 			},
 			{
-				breakpoint: 1300,
+				breakpoint: 744,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 1,
+					slidesToScroll: 2,
 				},
 			},
 			{
-				breakpoint: 1020,
+				breakpoint: 640,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -66,7 +64,7 @@ export const CarouselCards = ({ data }: { data: any }) => {
 	return (
 		<Slider
 			{...settings}
-			className="ml-16 mr-24 xl:pl-[calc(5%)] lg:pl-[calc(10%)] md:pl-[calc(23%)] sm:pl-[calc(12%)]"
+			className="ml-16 mr-24 min-[1920px]:pl-[70px] 2xl:pl-[30px] xl:pl-[40px] lg:pl-[30px] sm:pl-[23px]"
 		>
 			{data.map((item: any, index: number) => (
 				<Link href={`/${item.id}`} key={index}>

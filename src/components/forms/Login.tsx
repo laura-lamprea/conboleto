@@ -1,22 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler} from "react-hook-form";
 import Link from "next/link";
 import { IoEyeSharp } from "react-icons/io5";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { TbMailFilled } from "react-icons/tb";
 import { FcGoogle } from "react-icons/fc";
-import ConboletoButton from "@/components/ui/button/ConboletoButton";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { loginSchema } from "@/validations/loginSchema";
+
+type FormValues = {
+	email: string;
+	password: string;
+};
 
 const LoginForm = () => {
 	const [showPassword, setShowPassword] = useState(false);
-
 	const {
 		register,
 		handleSubmit,
-		setError,
+		watch,
 		formState: { errors },
-	} = useForm();
+	} = useForm<FormValues>({
+		resolver: zodResolver(loginSchema),
+	});
 	const [form, setForm] = useState({
 		email: "",
 		password: "",
@@ -29,9 +36,9 @@ const LoginForm = () => {
 		});
 	};
 
-	const onSubmit = (data: any) => {
-		console.log("Datos del formulario:", data);
-	};
+	const onSubmit: SubmitHandler<FormValues> = (data) => {
+		console.log(data);
+	}
 
 	return (
 		<div className="w-[352px] mx-auto">
@@ -46,12 +53,10 @@ const LoginForm = () => {
 					<input
 						id="email"
 						type="email"
-						// onChange={handleInputChange}
-						// name="email"
 						{...register("email")}
 						className="w-[352px] h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center inline-flex"
 					/>
-					{/* {errors.email && <div style={{ color: 'red' }}>{typeof errors.email === 'string' && errors.email}</div>} */}
+					{errors.email?.message && <p className="text-red-600 text-sm p-1">{errors.email?.message}</p>}
 				</div>
 				<div>
 					<label
@@ -60,7 +65,6 @@ const LoginForm = () => {
 					>
 						Contraseña
 					</label>
-
 					<div className="relative  inset-y-0 right-0 flex items-center text-sm leading-5">
 						<input
 							id="password"
@@ -83,21 +87,16 @@ const LoginForm = () => {
 							)}
 						</button>
 					</div>
+					{errors.password?.message && <p className="text-red-600 text-sm p-1">{errors.password?.message}</p>}
 
-					{errors.email && (
-						<div style={{ color: "red" }}>"Se necesita este campo</div>
-					)}
+				
 				</div>
 				<div className="w-[352px] h-[22px] my-4 text-right text-gray-800 text-sm font-normal font-['Public Sans'] underline leading-snug">
 					<Link href={"/"}>¿Olvidaste tu contraseña?</Link>
 				</div>
-
-				<ConboletoButton
-				// onClick={submit}
-				>
+				<button className="h-[52px] w-full bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Login
-				</ConboletoButton>
-
+				</button>
 				<div className="inline-flex items-center my-8 justify-center w-full bg-slate-500 ">
 					<hr className="w-full h-px bg-gray-200 border-0 "></hr>
 					<span className="absolute px-3 font-medium text-gray-900 bg-white">

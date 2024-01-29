@@ -44,7 +44,7 @@ export const CarouselCards = ({ data }: { data: any }) => {
 				},
 			},
 			{
-				breakpoint: 744,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,

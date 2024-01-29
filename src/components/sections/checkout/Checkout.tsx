@@ -13,7 +13,8 @@ const Checkout = ({ isAuthenticated }: { isAuthenticated: boolean }) => {
 	return (
 		<div className="relative flex">
 			<div className="grow flex flex-col justify-center">
-				<div className="w-[737px] h-[63px] absolute top-6 self-center flex items-center bg-red-200 rounded-xl border border-rose-600 text-zinc-800 space-x-1">
+				<div className="w-[50%] h-[63px] absolute top-6 self-center flex items-center bg-red-200 rounded-xl border border-rose-600 text-zinc-800 space-x-1">
+				{/* <div className="w-[737px] h-[63px] absolute top-6 self-center flex items-center bg-red-200 rounded-xl border border-rose-600 text-zinc-800 space-x-1"> */}
 					<FaTicketAlt
 						style={{
 							fontSize: "20px",

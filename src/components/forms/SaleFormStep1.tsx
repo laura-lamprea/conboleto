@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import {} from "next/navigation";
 import { PiSealCheckFill } from "react-icons/pi";
-import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 const SaleFormStep1 = ({ setCurrentStep }: { setCurrentStep: Function }) => {
 	const [selectedOption, setSelectedOption] = useState("option1");
@@ -70,9 +69,12 @@ const SaleFormStep1 = ({ setCurrentStep }: { setCurrentStep: Function }) => {
 
 			{selectedOption === "option1" ? <GroupComponent /> : <SingleComponent />}
 
-			<ConboletoButton onClick={handleSubmit} className="my-8">
+			<button
+				className="w-full h-[52px] my-8 bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]"
+				onClick={handleSubmit}
+			>
 				Comprar boletos
-			</ConboletoButton>
+			</button>
 		</div>
 	);
 };

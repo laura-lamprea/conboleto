@@ -1,6 +1,5 @@
 import { FaQrcode } from "react-icons/fa";
 import SummaryCard from "@/components/ui/invoice-summary/SummaryCard";
-import ConboletoButton from "@/components/ui/button/ConboletoButton";
 
 const Success = () => {
 	return (
@@ -32,9 +31,9 @@ const Success = () => {
 						</p>
 					</div>
 				</div>
-				<ConboletoButton width={"[221px]"} height={"12"} className="my-6">
+				<button className="w-[221px] h-12 my-6 bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Ver mis boletos
-				</ConboletoButton>
+				</button>
 			</div>
 			<SummaryCard />
 		</div>

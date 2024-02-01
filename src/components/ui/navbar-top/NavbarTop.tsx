@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/images/logo.png";
 import { IoSearchOutline } from "react-icons/io5";
+import LoginButton from "@/components/ui/button/LoginButton";
 
 export const NavbarTop = () => {
 	return (
@@ -40,9 +41,7 @@ export const NavbarTop = () => {
 				<button className="hidden lg:inline-block w-[157px] h-12  my-8 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Crea tu evento
 				</button>
-				<button className="w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
-					Iniciar sesión
-				</button>
+				<LoginButton />
 			</div>
 		</nav>
 	);

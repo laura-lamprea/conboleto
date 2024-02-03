@@ -11,7 +11,7 @@ const SummaryCard = () => {
 		location: "Foro sol",
 	};
 	return (
-		<div className="relative w-[346px] h-[463px] rounded-xl bg-white shadow">
+		<div className="relative w-[310px] sm:w-[346px] h-[463px] mx-5 rounded-xl bg-white shadow">
 			<Image
 				alt="Event image"
 				className="w-full h-[183px] rounded-xl rounded-b-none"

@@ -13,18 +13,17 @@ const Checkout = ({ isAuthenticated }: { isAuthenticated: boolean }) => {
 	return (
 		<div className="relative flex">
 			<div className="grow flex flex-col justify-center">
-				<div className="w-[50%] h-[63px] absolute top-6 self-center flex items-center bg-red-200 rounded-xl border border-rose-600 text-zinc-800 space-x-1">
-				{/* <div className="w-[737px] h-[63px] absolute top-6 self-center flex items-center bg-red-200 rounded-xl border border-rose-600 text-zinc-800 space-x-1"> */}
+				<div className="w-[92%] sm:w-[80%] lg:w-[50%] h-[63px] absolute top-6 self-center flex flex-wrap px-2 items-center bg-red-200 rounded-xl border border-rose-600 text-zinc-800 space-x-1">
 					<FaTicketAlt
 						style={{
 							fontSize: "20px",
 							color: "#EB2D74",
-							margin: "0 5px 0 16px",
+							margin: "0 5px",
 						}}
 					/>
-					<span className="text-zinc-800">Tienes</span>
-					<span className="text-zinc-800 text-lg font-bold">10:23</span>
-					<span className="text-zinc-800">
+					<span className="text-zinc-800 text-sm sm:text-base">Tienes</span>
+					<span className="text-zinc-800 text-md sm:text-lg font-bold">10:23</span>
+					<span className="text-zinc-800 text-sm sm:text-base">
 						para finalizar tu compra o será cancelada.
 					</span>
 				</div>
@@ -38,7 +37,7 @@ const Checkout = ({ isAuthenticated }: { isAuthenticated: boolean }) => {
 							Para continuar con tu compra de boletos es <br />
 							necesario que ingreses a tu cuenta.
 						</div>
-						<LoginForm />
+						<LoginForm setForgot={() => {}} />
 					</div>
 				) : currentStep ? (
 					<SaleFormStep1 setCurrentStep={setCurrentSteps} />

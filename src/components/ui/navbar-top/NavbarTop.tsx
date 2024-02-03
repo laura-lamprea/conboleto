@@ -5,13 +5,19 @@ import React from "react";
 import logo from "@/assets/images/logo.png";
 import { IoSearchOutline } from "react-icons/io5";
 import LoginButton from "@/components/ui/button/LoginButton";
+import DrawerButton from "@/components/ui/button/DrawerButton";
 
 export const NavbarTop = () => {
 	return (
-		<nav className="flex items-center justify-between h-24 px-4 py-6 bg-slate-900 w-full ">
+		<nav className="flex items-center justify-between h-[42px] sm:h-[74px] xl:h-24 px-4 py-6 bg-slate-900 w-full ">
+			<DrawerButton/>
 			<div className="flex items-center">
 				<Link href={"/"}>
-					<Image src={logo} alt="conboleto_img" className="h-12" />
+					<Image
+						src={logo}
+						alt="conboleto_img"
+						className="h-5 md:h-12 w-auto"
+					/>
 				</Link>
 				<form>
 					<div className="relative hidden md:block">
@@ -34,7 +40,7 @@ export const NavbarTop = () => {
 				</form>
 			</div>
 
-			<div className="flex space-x-5">
+			<div className="hidden sm:flex space-x-5">
 				<button className="hidden lg:inline-block text-white text-base mx-5">
 					Soporte
 				</button>
@@ -42,6 +48,10 @@ export const NavbarTop = () => {
 					Crea tu evento
 				</button>
 				<LoginButton />
+			</div>
+
+			<div className="block sm:hidden">
+				<IoSearchOutline />
 			</div>
 		</nav>
 	);

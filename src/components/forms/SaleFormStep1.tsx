@@ -13,14 +13,14 @@ const SaleFormStep1 = ({ setCurrentStep }: { setCurrentStep: Function }) => {
 		setCurrentStep(false);
 	};
 	return (
-		<div className="w-[390px] mx-auto mt-20">
+		<div className="w-[310px] sm:w-[390px] mx-auto mt-20">
 			<p className="text-zinc-800 text-xl font-bold mt-8">Paso 1 de 2</p>
 			<p className="text-neutral-400 text-base font-normal">
 				Asignación de boletos
 			</p>
 
 			<div
-				className={`flex items-center mt-4 w-[390px] h-14 p-3 bg-white rounded-xl border ${
+				className={`flex items-center mt-4 w-full h-14 p-3 bg-white rounded-xl border ${
 					selectedOption === "option1" ? "border-pink-700" : "border-stone-300"
 				}`}
 			>
@@ -35,7 +35,7 @@ const SaleFormStep1 = ({ setCurrentStep }: { setCurrentStep: Function }) => {
 				></input>
 				<label
 					htmlFor="bordered-radio-1"
-					className={`w-full py-4 ms-2 text-base font-medium ${
+					className={`w-full py-4 ms-2 text-sm sm:text-base font-medium ${
 						selectedOption === "option1" ? "text-zinc-800" : "text-zinc-500"
 					}`}
 				>
@@ -43,7 +43,7 @@ const SaleFormStep1 = ({ setCurrentStep }: { setCurrentStep: Function }) => {
 				</label>
 			</div>
 			<div
-				className={`flex items-center mt-[14px] w-[390px] h-14 p-3 bg-white rounded-xl border ${
+				className={`flex items-center mt-[14px] w-full h-14 p-3 bg-white rounded-xl border ${
 					selectedOption === "option2" ? "border-pink-700" : "border-stone-300"
 				}`}
 			>
@@ -59,7 +59,7 @@ const SaleFormStep1 = ({ setCurrentStep }: { setCurrentStep: Function }) => {
 				></input>
 				<label
 					htmlFor="bordered-radio-2"
-					className={`w-full py-4 ms-2 text-base font-medium ${
+					className={`w-full py-4 ms-2 text-sm sm:text-base font-medium ${
 						selectedOption === "option2" ? "text-zinc-800" : "text-zinc-500"
 					}`}
 				>
@@ -83,20 +83,20 @@ export default SaleFormStep1;
 
 const GroupComponent = () => {
 	return (
-		<div className="mt-12">
-			<p className="w-[346px] text-zinc-800 text-base font-bold">
+		<div className="mt-12 w-full">
+			<p className="text-zinc-800 text-base font-bold">
 				Los boletos serán asignados a tu nombre
 			</p>
-			<div className="w-[385px] h-[85px] mt-4 pl-3.5 pr-[47px] py-[22px] rounded-lg border border-gray-400 border-opacity-20 justify-start items-center inline-flex">
+			<div className="h-[85px] w-full mt-4 px-3.5 py-[22px] rounded-lg border border-gray-400 border-opacity-20 flex justify-between items-center">
 				<div className="">
-					<p className="w-[324px] h-[22px] text-gray-800 text-sm font-bold leading-snug">
+					<p className="text-gray-800 text-sm font-bold leading-snug">
 						Javier Medina Cazares
 					</p>
-					<p className="w-[324px] h-[22px] text-gray-800 text-sm font-normal leading-snug">
+					<p className="text-gray-800 text-sm font-normal leading-snug">
 						javier.medina@knesysplus.com
 					</p>
 				</div>
-				<div className="w-10 pl-3 pr-2 py-2.5 justify-end items-center inline-flex">
+				<div className="pl-3 pr-2 ">
 					<PiSealCheckFill
 						style={{ height: "20px", width: "20px", color: "#1e90ff" }}
 					/>
@@ -113,15 +113,13 @@ const SingleComponent = () => {
 		setIsChecked(!isChecked);
 	};
 	return (
-		<div className="mt-12">
+		<div className="mt-12 w-full">
 			<p className="w-[346px] text-zinc-800 text-base font-bold">
 				Asigna los boletos de forma individual
 			</p>
-			<div className="w-[390px] h-[156px] p-4 mt-4 rounded-xl border border-stone-300">
-				<p className="w-[346px] text-zinc-800 text-base font-bold">
-					Boleto General
-				</p>
-				<div className="w-[362px] h-12 relative rounded-lg pl-3.5 pr-2 mt-2 py-[22px] border border-gray-400 border-opacity-20 justify-start items-center inline-flex">
+			<div className="w-full h-[156px] p-4 mt-4 rounded-xl border border-stone-300">
+				<p className="text-zinc-800 text-base font-bold">Boleto General</p>
+				<div className="w-full h-12 relative rounded-lg pl-3.5 pr-2 mt-2 py-[22px] border border-gray-400 border-opacity-20 justify-start items-center inline-flex">
 					<p className="w-[324px] h-[22px] text-gray-800 text-sm font-medium leading-snug">
 						javier.medina@knesysplus.com
 					</p>

@@ -13,7 +13,7 @@ type FormValues = {
 	password: string;
 };
 
-const LoginForm = ({ setForgot }: { setForgot: Function}) => {
+const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 	const [showPassword, setShowPassword] = useState(false);
 	const {
 		register,
@@ -29,7 +29,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function}) => {
 	};
 
 	return (
-		<div className="w-[352px] mx-auto">
+		<div className="w-[310px] sm:w-[352px] mx-auto">
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<div className="mb-5">
 					<label
@@ -42,7 +42,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function}) => {
 						id="email"
 						type="email"
 						{...register("email")}
-						className="w-[352px] h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center inline-flex"
+						className="w-full h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center inline-flex"
 					/>
 					{errors.email?.message && (
 						<p className="text-red-600 text-sm p-1">{errors.email?.message}</p>
@@ -55,7 +55,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function}) => {
 					>
 						Contraseña
 					</label>
-					<div className="relative  inset-y-0 right-0 flex items-center text-sm leading-5">
+					<div className="relative inset-y-0 right-0 flex items-center text-sm leading-5">
 						<input
 							id="password"
 							type={showPassword ? "text" : "password"}
@@ -83,7 +83,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function}) => {
 				</div>
 				<button
 					onClick={() => setForgot()}
-					className="w-[352px] h-[22px] my-4 text-right text-gray-800 text-sm font-normal font-['Public Sans'] underline leading-snug"
+					className="w-full h-[22px] my-4 text-right text-gray-800 text-sm font-normal font-['Public Sans'] underline leading-snug"
 				>
 					¿Olvidaste tu contraseña?
 				</button>

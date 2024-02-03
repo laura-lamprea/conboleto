@@ -23,7 +23,7 @@ const LoginButton = () => {
 				data-modal-toggle="default-modal"
 				type="button"
 				onClick={() => handleOpenModal("login")}
-				className="w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-opacity-30 backdrop-blur-[31.80px]"
+				className="hidden sm:block w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-opacity-30 backdrop-blur-[31.80px]"
 			>
 				Iniciar sesión
 			</button>

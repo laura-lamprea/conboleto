@@ -17,11 +17,11 @@ const SaleFormStep2 = () => {
 	};
 
 	return (
-		<div className="w-[390px] mx-auto">
+		<div className="w-[310px] sm:w-[390px] mx-auto mt-20">
 			<p className="text-zinc-800 text-xl font-bold mt-8">Paso 2 de 2</p>
 			<p className="text-neutral-400 text-base font-normal">Método de pago</p>
 			<div
-				className={`flex items-center mt-4 w-[390px] h-14 p-3 bg-white rounded-xl border ${
+				className={`flex items-center mt-4 w-full h-14 p-3 bg-white rounded-xl border ${
 					selectedOption === "option1" ? "border-pink-700" : "border-stone-300"
 				}`}
 			>

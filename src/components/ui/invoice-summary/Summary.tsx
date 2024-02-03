@@ -3,7 +3,7 @@ import mayer from "@/mocks/images/mayer.png";
 
 const Summary = () => {
 	return (
-		<div className="right-0 p-14 border-l-2 ">
+		<div className="hidden min-[770px]:block right-0 p-14 border-l-2 ">
 			<Image
 				alt="Event image"
 				className="w-[299px] h-[183px] rounded-xl"

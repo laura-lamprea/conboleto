@@ -75,20 +75,21 @@ const Detail = () => {
 
 	return (
 		<div className="">
-			<div className="relative flex w-full h-[580px]">
+			<div className="relative w-full h-[180px] sm:h-[380px] lg:h-[450px] xl:h-[550px] 2xl:h-[1020px] overflow-hidden">
 				<Image className="h-full w-full" src={mayer} alt="mayer" />
 				<div className="absolute h-44 bottom-0 w-full  bg-gradient-to-t from-slate-900 to-transparent "></div>
-				<div className="absolute w-full flex flex-col items-left justify-between -space-y-4 bottom-14 px-14">
-					{/* <div className="text-left -space-y-4"> */}
-					<p className="text-white text-[44px] font-bold">
+				<div className="flex w-full items-center justify-between absolute bottom-5 px-5 sm:px-10  xl:px-[123px]">
+					<div className="text-left -space-y-1 xl:space-y-1">
+						<p className="text-white text-sm sm:text-2xl xl:text-[44px] font-bold">
 						John Mayer Solo Tour
-					</p>
-					<p className="text-[32px]">11 de noviembre</p>
-					<p className="text-[32px]">Foro sol</p>
+						</p>
+						<p className="text-xs sm:text-lg xl:text-[32px]">11 de noviembre</p>
+						<p className="text-xs sm:text-lg xl:text-[32px]">Foro sol</p>
+					</div>
 				</div>
 			</div>
 
-			<div className="px-[70px] py-7">
+			<div className="px-4 sm:px-[70px] py-7">
 				<div className="flex space-x-1">
 					<Link href={"/"}>
 						<Image className="" src={spotifyButton} alt="mayer" />{" "}
@@ -103,22 +104,22 @@ const Detail = () => {
 
 				<div className="flex flex-col-reverse justify-center xl:flex-row xl:justify-between">
 					<div>
-						<div className="text-zinc-800 text-[32px] font-bold mt-12">
+						<div className="text-zinc-800 text-xl sm:text-[32px] font-bold mt-12">
 							Mapa del evento
 						</div>
 						<Image className="mt-7" src={mapaDefault} alt="map" />
 
-						<div className="grid grid-cols-2 gap-4 w-full mt-20">
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-20">
 							{labels.map((label, index: number) => (
 								<div className="flex gap-3 items-center " key={index}>
 									<div className="w-12 h-12 p-2 flex items-center justify-center bg-pink-200 rounded-lg">
 										{label.icono}
 									</div>
 									<div>
-										<p className="text-zinc-800 text-2xl font-bold ">
+										<p className="text-zinc-800 text-lg sm:text-2xl font-bold ">
 											{label.title}
 										</p>
-										<p className="text-zinc-800 text-base font-light ">
+										<p className="text-zinc-800 text-sm sm:text-base font-light ">
 											{label.subtitle}
 										</p>
 									</div>
@@ -127,8 +128,8 @@ const Detail = () => {
 						</div>
 
 						<div className="w-full flex flex-col items-left justify-between mt-[90px] mb-7">
-							<p className="text-zinc-800 text-[32px] font-bold">Ubicación</p>
-							<p className="text-2xl font-medium text-zinc-800">Foro sol</p>
+							<p className="text-zinc-800 text-xl sm:text-[32px] font-bold">Ubicación</p>
+							<p className="text-lg sm:text-2xl font-medium text-zinc-800">Foro sol</p>
 							<Link
 								href={"/"}
 								className="text-zinc-500 text-[15px] font-normal underline"
@@ -157,10 +158,10 @@ const Detail = () => {
 						)}
 
 						<div className="w-full flex flex-col items-left justify-between mt-[90px] mb-7">
-							<p className="text-zinc-800 text-[32px] font-bold">
+							<p className="text-zinc-800 text-xl sm:text-[32px] font-bold">
 								Acerca del evento
 							</p>
-							<p className="mb-6 text-justify text-zinc-500 text-[15px] font-normal break-words">
+							<p className="mb-6 mt-2 sm:mt-4 text-justify text-zinc-500 text-xs sm:text-[15px] font-normal break-words">
 								John Mayer is a man of contradictions. He's an international pop
 								star, but also an authentic bluesman endorsed by some of the
 								genre's biggest legends (B.B. King, Eric Clapton). He's famous

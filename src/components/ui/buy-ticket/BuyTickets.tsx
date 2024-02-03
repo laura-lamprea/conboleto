@@ -28,14 +28,14 @@ const BuyTickets = () => {
 	};
 
 	return (
-		<div className="h-auto xl:h-[650px] rounded-xl border border-stone-300 flex flex-col  xl:py-6  mt-12">
+		<div className="h-auto xl:h-[650px] xl:py-6 rounded-xl border border-stone-300 flex flex-col mt-12">
 			<div className="flex justify-between px-8 py-6 border-b-[1px] border-stone-300 xl:border-b-0">
 				<div className="-space-y-2 ">
-					<span className="text-zinc-800 text-[22px] font-bold">General</span>
+					<span className="text-zinc-800 text-base sm:text-[22px] font-bold">General</span>
 					<div className="">
 						<span className="text-rose-600 text-xl font-semibold">$</span>
-						<span className="text-zinc-800 text-2xl font-bold">2000</span>
-						<span className="text-zinc-800 text-xl font-light"> MXN</span>
+						<span className="text-zinc-800 text-lg sm:text-2xl font-bold">2000</span>
+						<span className="text-zinc-800 text-base sm:text-xl font-light"> MXN</span>
 					</div>
 					<span className="text-zinc-800 text-base font-light">
 						Cargos por servicio incluido
@@ -62,11 +62,11 @@ const BuyTickets = () => {
 
 			<div className="flex justify-between px-8 py-6 border-b-[1px] border-stone-300 xl:border-b-0">
 				<div className="-space-y-2">
-					<span className="text-zinc-800 text-[22px] font-bold">VIP</span>
+					<span className="text-zinc-800 text-base sm:text-[22px] font-bold">VIP</span>
 					<div className="">
 						<span className="text-rose-600 text-xl font-semibold">$</span>
-						<span className="text-zinc-800 text-2xl font-bold">3500</span>
-						<span className="text-zinc-800 text-xl font-light"> MXN</span>
+						<span className="text-zinc-800 text-lg sm:text-2xl font-bold">3500</span>
+						<span className="text-zinc-800 text-base sm:text-xl font-light"> MXN</span>
 					</div>
 					<span className="text-zinc-800 text-base font-light">
 						Cargos por servicio incluido
@@ -93,13 +93,13 @@ const BuyTickets = () => {
 
 			<div className="flex justify-between px-8 py-6 border-b-[1px] border-stone-300 xl:border-b-0">
 				<div className="-space-y-2">
-					<span className="text-zinc-800 text-[22px] font-bold">
+					<span className="text-zinc-800 text-base sm:text-[22px] font-bold">
 						MEET & GREET
 					</span>
 					<div className="">
 						<span className="text-rose-600 text-xl font-semibold">$</span>
-						<span className="text-zinc-800 text-2xl font-bold">3500</span>
-						<span className="text-zinc-800 text-xl font-light"> MXN</span>
+						<span className="text-zinc-800 text-lg sm:text-2xl font-bold">3500</span>
+						<span className="text-zinc-800 text-base sm:text-xl font-light"> MXN</span>
 					</div>
 					<span className="text-zinc-800 text-base font-light">
 						Cargos por servicio incluido
@@ -124,22 +124,22 @@ const BuyTickets = () => {
 				</div>
 			</div>
 
-			<div className="flex justify-between items-center px-8 py-6 xl:flex-col xl:items-start ">
+			<div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-8 py-6 xl:flex-col xl:items-start ">
 				<div className="-space-y-2 xl:mt-4 xl:mb-5 ">
-					<span className="text-zinc-800 text-[22px] font-bold">
+					<span className="text-zinc-800 text-base sm:text-[22px] font-bold">
 						Compra total
 					</span>
 					<div className="">
 						<span className="text-rose-600 text-xl font-semibold">$</span>
-						<span className="text-zinc-800 text-2xl font-bold">9000</span>
-						<span className="text-zinc-800 text-xl font-light"> MXN</span>
+						<span className="text-zinc-800 text-lg sm:text-2xl font-bold">9000</span>
+						<span className="text-zinc-800 text-base sm:text-xl font-light"> MXN</span>
 					</div>
 					<span className="text-zinc-800 text-base font-light">
 						Cargos por servicio incluido
 					</span>
 				</div>
 				<button
-					className="h-[52px] w-[331px] self-center bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]"
+					className="h-[52px] w-[300px] sm:w-[331px] mt-5 sm:mt-0 self-center bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]"
 					onClick={submit}
 				>
 					Comprar boletos

@@ -10,9 +10,12 @@ import navidad from "./images/navidad.png";
 
 
 export const imagesCarousel = [
-    { src: nba, alt: "NBA" },
     { src: weekend, alt: "weekend" },
+    { src: cats, alt: "cats" },
+    { src: nba, alt: "NBA" },
+    { src: cirque, alt: "cirque" },
 ]
+
 
 export const eventsPopular = [
     { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: weekend, alt: "weekend", name: "The Weeknd America Tour: After Hours Til Dawn", cost: "$450" },

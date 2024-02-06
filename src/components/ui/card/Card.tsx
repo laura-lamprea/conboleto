@@ -11,15 +11,14 @@ import Image from "next/image";
 // 	cost: string;
 // }
 
-
-const Card = ({event}: any) => {
+const Card = ({ event }: any) => {
 	return (
-		<div className="w-[270px] xl:w-[330px] rounded-xl bg-white shadow border border-neutral-200">
+		<div className="w-[260px] 2xl:w-[330px] rounded-xl bg-white shadow border border-neutral-200">
 			<div className="relative">
 				<Image
 					src={event.src}
 					alt={event.alt}
-					className="w-full h-[264px] xl:h-[342px] rounded-xl rounded-b-none"
+					className="w-full h-[264px] 2xl:h-[342px] rounded-xl rounded-b-none"
 				/>
 				<div className="absolute rounded-xl h-14 top-0 w-full bg-gradient-to-b from-slate-900 to-transparent"></div>
 
@@ -32,19 +31,19 @@ const Card = ({event}: any) => {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col justify-between h-[133px] xl:h-[172px] px-[22px] pt-[15px] pb-4 ">
+			<div className="flex flex-col justify-between h-[133px] 2xl:h-[172px] px-[22px] pt-[15px] pb-4 ">
 				<div>
-					<p className="text-zinc-800 text-lg xl:text-[22px] font-semibold tracking-tight">
+					<p className="text-zinc-800 text-lg 2xl:text-[22px] font-semibold tracking-tight">
 						{event.name}
 					</p>
-					<p className="text-zinc-600 text-sm xl:text-base font-medium">
+					<p className="text-zinc-600 text-sm 2xl:text-base font-medium">
 						Guadalajara, Jalisco
 					</p>
-					<p className="text-zinc-600 text-sm xl:text-base font-medium">
+					<p className="text-zinc-600 text-sm 2xl:text-base font-medium">
 						Auditorio Telmex
 					</p>
 				</div>
-				<p className="text-rose-600 text-sm xl:text-base font-bold">
+				<p className="text-rose-600 text-sm 2xl:text-base font-bold">
 					Desde {event.cost}
 				</p>
 			</div>

@@ -52,7 +52,7 @@ export const CarouselImg = () => {
 							data-te-target="#carouselExampleCaptions"
 							data-te-slide-to="0"
 							data-te-carousel-active
-							className={`mx-1 sm:mx-2 w-2 h-2 sm:w-5 sm:h-5 flex-initial cursor-pointer rounded-full  ${
+							className={`mx-1 sm:mx-2 w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 flex-initial cursor-pointer rounded-full  ${
 								index === currentSlide ? 'bg-rose-600' : 'bg-gray-400'
 							  }`}
 							aria-current="true"
@@ -61,7 +61,7 @@ export const CarouselImg = () => {
 					))}
 				</div>
 				{/* <!--Carousel items--> */}
-				<div className="relative w-full h-[280px] sm:h-[380px] lg:h-[450px] xl:h-[550px] 2xl:h-[1020px] overflow-hidden">
+				<div className="relative w-full h-[280px] sm:h-[380px] lg:h-[450px] 2xl:h-[750px] overflow-hidden">
 					{imagesCarousel.map((image, index) => (
 						<div
 							key={index}
@@ -75,13 +75,13 @@ export const CarouselImg = () => {
 							<div className="absolute h-44 bottom-0 w-full  bg-gradient-to-t from-slate-900 to-transparent "></div>
 							<div className="flex w-full items-center justify-between absolute bottom-14 px-5 sm:px-10 md:px-[123px]">
 								<div className="text-left -space-y-1 xl:space-y-1">
-									<p className="text-white text-sm sm:text-2xl xl:text-[44px] font-bold">
+									<p className="text-white text-sm sm:text-2xl xl:text-4xl 2xl:text-[44px] font-bold">
 										NBA en México: Orlando vs Atlanta
 									</p>
 									<p className="text-xs sm:text-lg xl:text-[32px]">28 de Marzo</p>
 									<p className="text-xs sm:text-lg xl:text-[32px]">Arena CDMX</p>
 								</div>
-								<button className="text-sm w-[100px] h-8 sm:w-[195px] sm:h-14 bg-rose-600 rounded-xl border border-rose-600">
+								<button className="text-sm w-[100px] h-8 sm:w-32 sm:h-10 md:w-[195px] md:h-14 bg-rose-600 rounded-xl border border-rose-600">
 									Ver boletos
 								</button>
 							</div>

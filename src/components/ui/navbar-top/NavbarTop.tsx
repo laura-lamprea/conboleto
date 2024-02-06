@@ -16,7 +16,7 @@ export const NavbarTop = () => {
 					<Image
 						src={logo}
 						alt="conboleto_img"
-						className="h-5 md:h-12 w-auto"
+						className="h-5 sm:h-11 md:h-12 w-auto"
 					/>
 				</Link>
 				<form>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
 import "../../../app/globals.css";
@@ -10,8 +10,28 @@ import { IconArrowNext, IconArrowPrev } from "@/assets/figmaIcons";
 
 function PrevArrow(props: any) {
 	const { className, style, onClick } = props;
+	const [isVisible, setIsVisible] = useState(true);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsVisible(window.innerWidth >= 640);
+		};
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 	return (
-		<div className={className} style={style} onClick={onClick}>
+		<div
+			className={className}
+			style={{
+				...style,
+				marginTop: "-40px",
+				visibility: isVisible ? "visible" : "hidden",
+			}}
+			onClick={onClick}
+		>
 			<IconArrowPrev fillColor={"#727272"} />
 		</div>
 	);
@@ -19,8 +39,29 @@ function PrevArrow(props: any) {
 
 function NextArrow(props: any) {
 	const { className, style, onClick } = props;
+	const [isVisible, setIsVisible] = useState(true);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsVisible(window.innerWidth >= 640);
+		};
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
 	return (
-		<div className={className} style={{ ...style }} onClick={onClick}>
+		<div
+			className={className}
+			style={{
+				...style,
+				marginTop: "-40px",
+				visibility: isVisible ? "visible" : "hidden",
+			}}
+			onClick={onClick}
+		>
 			<IconArrowNext fillColor={"#727272"} />
 		</div>
 	);
@@ -36,7 +77,7 @@ export const CarouselCards = ({ data }: { data: any }) => {
 		cssEase: "linear",
 		responsive: [
 			{
-				breakpoint: 1290,
+				breakpoint: 1270,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 3,
@@ -58,13 +99,13 @@ export const CarouselCards = ({ data }: { data: any }) => {
 				},
 			},
 		],
-		prevArrow: <PrevArrow />,
-		nextArrow: <NextArrow />,
+		prevArrow: <PrevArrow className="slick-prev " />,
+		nextArrow: <NextArrow className="slick-next " />,
 	};
 	return (
 		<Slider
 			{...settings}
-			className="ml-16 mr-24 min-[1920px]:pl-[70px] 2xl:pl-[30px] xl:pl-[40px] lg:pl-[30px] sm:pl-[23px]"
+			className="max-w-[310px] pl-12 sm:max-w-[600px] sm:pl-10 sm:ml-10 md:max-w-[660px] md:pl-16 lg:max-w-[900px] lg:pl-12 lg:ml-12 xl:max-w-[1150px] xl:pl-11 xl:ml-14 2xl:max-w-[1400px] min-[1700px]:max-w-[1700px] min-[1700px]:ml-16 min-[1700px]:pl-[76px]"
 		>
 			{data.map((item: any, index: number) => (
 				<Link href={`/${item.id}`} key={index}>

@@ -5,7 +5,7 @@ import RegisterForm from "@/components/forms/Register";
 import ForgotPasswordForm from "@/components/forms/ForgotPassword";
 import CodeSentForm from "@/components/forms/CodeSent";
 
-const LoginButton = () => {
+const LoginButtonNavbar = () => {
 	const [openModal, setOpenModal] = useState<string | null>(null);
 
 	const handleOpenModal = (modalName: string | null): void => {
@@ -100,4 +100,4 @@ const LoginButton = () => {
 	);
 };
 
-export default LoginButton;
+export default LoginButtonNavbar;

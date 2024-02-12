@@ -7,6 +7,9 @@ import { TbMailFilled } from "react-icons/tb";
 import { FcGoogle } from "react-icons/fc";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "@/validations/Schemas";
+import { useFormState, useFormStatus } from "react-dom";
+// import { authenticate } from "@/actions";
+import { signIn } from "next-auth/react";
 
 type FormValues = {
 	email: string;
@@ -14,6 +17,10 @@ type FormValues = {
 };
 
 const LoginForm = ({ setForgot }: { setForgot: Function }) => {
+	// const [state, dispatch] = useFormState(authenticate, undefined);
+
+	// console.log({ state });
+
 	const [showPassword, setShowPassword] = useState(false);
 	const {
 		register,
@@ -30,7 +37,8 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 
 	return (
 		<div className="w-[310px] sm:w-[352px] mx-auto">
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form>
+				{/* <form action={dispatch}> */}
 				<div className="mb-5">
 					<label
 						htmlFor="email"
@@ -41,6 +49,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 					<input
 						id="email"
 						type="email"
+						autoComplete="username"
 						{...register("email")}
 						className="w-full h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center inline-flex"
 					/>
@@ -57,10 +66,11 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 					</label>
 					<div className="relative inset-y-0 right-0 flex items-center text-sm leading-5">
 						<input
-							id="password"
+							id="current-password"
+							autoComplete="current-password"
 							type={showPassword ? "text" : "password"}
 							{...register("password")}
-							className="w-full h-[54px]  px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center"
+							className="w-full h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center"
 						/>
 						<button
 							onClick={() => setShowPassword(!showPassword)}
@@ -80,6 +90,11 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 							{errors.password?.message}
 						</p>
 					)}
+					{/* {state === "Invalid credentials" && (
+						<p className="text-red-600 text-sm p-1">
+							Credenciales no son correctas
+						</p>
+					)} */}
 				</div>
 				<button
 					onClick={() => setForgot()}
@@ -87,31 +102,45 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 				>
 					¿Olvidaste tu contraseña?
 				</button>
-				{/* <div className="w-[352px] h-[22px] my-4 text-right text-gray-800 text-sm font-normal font-['Public Sans'] underline leading-snug">
-					<Link href={"/"}>¿Olvidaste tu contraseña?</Link>
-				</div> */}
-				<button className="h-[52px] w-full bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
-					Login
-				</button>
-				<div className="inline-flex items-center my-8 justify-center w-full bg-slate-500 ">
-					<hr className="w-full h-px bg-gray-200 border-0 "></hr>
-					<span className="absolute px-3 font-medium text-gray-900 bg-white">
-						or
-					</span>
-				</div>
-				<div className="flex justify-center space-x-3">
-					<button className="w-[39px] h-[39px] rounded-[19.50px] border border-slate-800 flex items-center justify-center">
-						<FcGoogle style={customIcon} />
-					</button>
-					<button className="w-[39px] h-[39px] rounded-[19.50px] border border-slate-800 flex items-center justify-center">
-						<TbMailFilled style={customIcon} />
-					</button>
-				</div>
+				<LoginButton />
 			</form>
+			{/* login with Google */}
+			<div className="inline-flex items-center my-8 justify-center w-full bg-slate-500 ">
+				<hr className="w-full h-px bg-gray-200 border-0 "></hr>
+				<span className="absolute px-3 font-medium text-gray-900 bg-white">
+					or
+				</span>
+			</div>
+			<div className="flex justify-center space-x-3">
+				<button
+					onClick={() => signIn()}
+					className="w-[39px] h-[39px] rounded-[19.50px] border border-slate-800 flex items-center justify-center"
+				>
+					<FcGoogle style={customIcon} />
+				</button>
+				<button className="w-[39px] h-[39px] rounded-[19.50px] border border-slate-800 flex items-center justify-center">
+					<TbMailFilled style={customIcon} />
+				</button>
+			</div>
 		</div>
 	);
 };
 export default LoginForm;
+
+function LoginButton() {
+	const { pending } = useFormStatus();
+	return (
+		<button
+			type="submit"
+			disabled={pending}
+			className={`h-[52px] w-full ${
+				pending ? "bg-gray-400" : " bg-rose-600"
+			}  rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]`}
+		>
+			Login
+		</button>
+	);
+}
 
 const customStyles = {
 	color: "#637381",

@@ -2,8 +2,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { IoIosArrowBack } from "react-icons/io";
+import { useSession } from "next-auth/react";
+import { getInitials } from "@/utils/getInitials";
 
 const DrawerButton = () => {
+	const { data: session } = useSession();
 	const [openDrawer, setOpenDrawer] = useState(false);
 
 	const handleToggleDrawer = () => {
@@ -29,25 +32,56 @@ const DrawerButton = () => {
 				aria-labelledby="drawer-navigation-label"
 			>
 				<div className="w-full h-[156px] flex items-center justify-center bg-slate-900 ">
-					<button
-						onClick={() => {}}
-						className="w-[157px] h-12 my-8 bg-rose-600 rounded-lg  backdrop-blur-[31.80px]"
-					>
-						Iniciar sesión
-					</button>
+					{session?.user ? (
+						<div className="flex items-center">
+							<button className="bg-rose-600 h-10 w-10 mr-3 rounded-full font-bold items-center justify-center text-base">
+								{getInitials(session?.user?.name || "AA")}
+							</button>
+							<div className="-space-y-1">
+								<p className="text-white text-base font-semibold">
+									{session?.user?.name}
+								</p>
+								<p className="text-white text-sm font-normal">
+									{session?.user?.email}
+								</p>
+							</div>
+						</div>
+					) : (
+						<button
+							onClick={() => {}}
+							className="w-[157px] h-12 my-8 bg-rose-600 rounded-lg  backdrop-blur-[31.80px]"
+						>
+							Iniciar sesión
+						</button>
+					)}
 				</div>
 				<div className="flex">
 					<div className="flex flex-col justify-between h-screen w-full">
-						<div className="flex flex-col p-5 space-y-2 text-gray-900 text-base font-semibold">
-							<Link href={"/"} onClick={handleToggleDrawer}>
-								Soporte
-							</Link>
-							<Link href={"/"} onClick={handleToggleDrawer}>
-								Contáctanos
-							</Link>
-							<Link href={"/about"} onClick={handleToggleDrawer}>
-								Acerca de nosotros
-							</Link>
+						<div>
+							{session?.user && (
+								<div className="flex flex-col p-5 space-y-2 text-gray-900 text-base font-semibold border-b border-b-gray-200">
+									<Link href={"/"} onClick={handleToggleDrawer}>
+										Mi perfil
+									</Link>
+									<Link href={"/"} onClick={handleToggleDrawer}>
+										Mis boletos
+									</Link>
+									<Link href={"/about"} onClick={handleToggleDrawer}>
+										Mis favoritos
+									</Link>
+								</div>
+							)}
+							<div className="flex flex-col p-5 space-y-2 text-gray-900 text-base font-semibold border-b border-b-gray-200">
+								<Link href={"/"} onClick={handleToggleDrawer}>
+									Soporte
+								</Link>
+								<Link href={"/"} onClick={handleToggleDrawer}>
+									Contáctanos
+								</Link>
+								<Link href={"/about"} onClick={handleToggleDrawer}>
+									Acerca de nosotros
+								</Link>
+							</div>
 						</div>
 
 						<div className="flex flex-col items-center p-5 mb-48">

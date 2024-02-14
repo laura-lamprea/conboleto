@@ -33,3 +33,12 @@ export const CodeSentSchema = z.object({
     message: 'Las contraseñas deben coincidir.',
 });
 
+export const ChangePasswordtSchema = z.object({
+    password: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" }),
+    newpassword: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" }),
+    passwordConfirmation: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" })
+}).refine((data) => data.newpassword === data.passwordConfirmation, {
+    path: ["passwordConfirmation"],
+    message: 'Las contraseñas deben coincidir.',
+});
+

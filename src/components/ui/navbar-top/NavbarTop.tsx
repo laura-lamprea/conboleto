@@ -8,10 +8,12 @@ import LoginButton from "@/components/ui/button/LoginButtonNavbar";
 import DrawerButton from "@/components/ui/button/DrawerButton";
 import { useSession } from "next-auth/react";
 import { getInitials } from "@/utils/getInitials";
+import { useRouter } from "next/navigation";
 
 export const NavbarTop = () => {
 	const { data: session } = useSession();
-	
+	const router = useRouter();
+
 	return (
 		<nav className="flex items-center justify-between h-[42px] sm:h-[74px] xl:h-24 px-4 py-6 bg-slate-900 w-full ">
 			<DrawerButton />
@@ -52,7 +54,10 @@ export const NavbarTop = () => {
 					Crea tu evento
 				</button>
 				{session?.user ? (
-					<button className="hidden sm:block my-9 bg-rose-600 h-10 w-10  rounded-full font-bold items-center justify-center text-base">
+					<button
+						onClick={() => router.push("/user")}
+						className="hidden sm:block my-9 bg-rose-600 h-10 w-10  rounded-full font-bold items-center justify-center text-base"
+					>
 						{getInitials(session?.user?.name || "AA")}
 					</button>
 				) : (

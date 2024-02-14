@@ -27,7 +27,7 @@ const Success = () => {
 					<div>
 						<p className="text-lg lg:text-2xl font-bold ">Boleto electrónico</p>
 						<p className="text-xs lg:text-base font-light ">
-							Olvidate de hacer filas para imprimir tu boleto
+							Olvídate de hacer filas para imprimir tu boleto
 						</p>
 					</div>
 				</div>

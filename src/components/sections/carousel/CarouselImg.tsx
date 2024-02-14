@@ -81,7 +81,7 @@ export const CarouselImg = () => {
 									<p className="text-xs sm:text-lg xl:text-[32px]">28 de Marzo</p>
 									<p className="text-xs sm:text-lg xl:text-[32px]">Arena CDMX</p>
 								</div>
-								<button className="text-sm w-[100px] h-8 sm:w-32 sm:h-10 md:w-[195px] md:h-14 bg-rose-600 rounded-xl border border-rose-600">
+								<button className="text-sm md:text-base 2xl:text-xl w-[100px] h-8 sm:w-32 sm:h-10 md:w-[100px] md:h-12 lg:w-[195px] lg:h-14 bg-rose-600 rounded-xl border border-rose-600">
 									Ver boletos
 								</button>
 							</div>

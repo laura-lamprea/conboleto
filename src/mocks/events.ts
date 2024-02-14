@@ -7,6 +7,8 @@ import rebelde from "./images/rebelde.png";
 import cirque from "./images/cirque.png";
 import cats from "./images/cats.png";
 import navidad from "./images/navidad.png";
+import mayer from "./images/mayer.png";
+import vangohn from "./images/vangohn.png";
 
 
 export const imagesCarousel = [
@@ -33,6 +35,20 @@ export const eventsSpectacular = [
     { id: "28262981-b5ed-43b0-b0b7-9032c932b268", src: navidad, alt: "navidad", name: "Aventura de navidad", cost: "$650" },
     { id: "eaaabf67-bfad-47eb-b55f-3263ba185477", src: rebelde, alt: "rebelde", name: "RBD TOUR 2024", cost: "$450" },
     { id: "39a612ca-6f53-4f20-8a09-d996ab86bb73", src: taylor, alt: "taylor", name: "Taylor Swift: Eras Tour", cost: "$950" },
+]
+
+
+export const tickets = [
+    { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre 10:50", place: "Foro sol" },
+    { id: "f12822e1-bde7-40a3-920c-d7ecd2a8a6d6", src: vangohn, alt: "vangohn", name: "Van Goh experience", date: "21 de diciembre", place: "Teatro Zapata" },
+]
+
+export const singleEvent = { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre 10:50", place: "Foro sol" }
+
+export const ticketsDetail = [
+    { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
+    { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
+    { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
 ]
 
 

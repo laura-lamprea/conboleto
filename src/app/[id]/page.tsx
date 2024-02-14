@@ -13,6 +13,7 @@ import { SiGooglemaps } from "react-icons/si";
 
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import BuyTickets from "@/components/ui/buy-ticket/BuyTickets";
+import ImageEvent from "@/components/ui/image-event/ImageEvent";
 
 const Detail = () => {
 	const [windowWidth, setWindowWidth] = useState(0);
@@ -40,7 +41,7 @@ const Detail = () => {
 		{
 			icono: <FaQrcode style={styleIcon} />,
 			title: "Boletos electrónicos",
-			subtitle: "Olvidate de hacer fila para imprimir tu boleto",
+			subtitle: "Olvídate de hacer fila para imprimir tu boleto",
 		},
 		{
 			icono: <FaShieldAlt style={styleIcon} />,
@@ -75,30 +76,17 @@ const Detail = () => {
 
 	return (
 		<div className="">
-			<div className="relative w-full h-[180px] sm:h-[380px] lg:h-[450px] 2xl:h-[750px] overflow-hidden">
-				<Image className="h-full w-full" src={mayer} alt="mayer" />
-				<div className="absolute h-44 bottom-0 w-full  bg-gradient-to-t from-slate-900 to-transparent "></div>
-				<div className="flex w-full items-center justify-between absolute bottom-5 px-5 sm:px-10  xl:px-[123px]">
-					<div className="text-left -space-y-1 xl:space-y-1">
-						<p className="text-white text-sm sm:text-2xl xl:text-[44px] font-bold">
-							John Mayer Solo Tour
-						</p>
-						<p className="text-xs sm:text-lg xl:text-[32px]">11 de noviembre</p>
-						<p className="text-xs sm:text-lg xl:text-[32px]">Foro sol</p>
-					</div>
-				</div>
-			</div>
-
+			<ImageEvent />
 			<div className="px-4 sm:px-[70px] py-7">
 				<div className="flex space-x-1">
 					<Link href={"/"}>
-						<Image className="" src={spotifyButton} alt="mayer" />{" "}
+						<Image className="h-8 w-[83px] md:h-10 md:w-[109px]" src={spotifyButton} alt="mayer" />{" "}
 					</Link>
 					<Link href={"/"}>
-						<Image className="" src={appleButton} alt="mayer" />
+						<Image className="h-8 w-[83px] md:h-10 md:w-[109px]" src={appleButton} alt="mayer" />
 					</Link>
 					<Link href={"/"}>
-						<Image className="" src={youtubeButton} alt="mayer" />
+						<Image className="h-8 w-[83px] md:h-10 md:w-[109px]" src={youtubeButton} alt="mayer" />
 					</Link>
 				</div>
 

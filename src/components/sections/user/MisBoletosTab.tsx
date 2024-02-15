@@ -18,10 +18,10 @@ const MisBoletosTab = () => {
 	return (
 		<div className="flex items-center justify-center">
 			{tickets.length > 0 ? (
-				<div className="grid grid-cols-3 gap-10">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-10">
 					{tickets.map((ticket: TicketType, index: number) => (
 						<Link href={`/user/ticketDetail`} key={index}>
-							<div className="relative w-[360px] h-[203px]">
+							<div className="relative w-[320px] md:w-[320px] lg:w-[280px] xl:w-[360px] h-[203px]">
 								<Image
 									src={ticket.src}
 									alt={ticket.name}

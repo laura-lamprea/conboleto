@@ -49,6 +49,7 @@ export const ticketsDetail = [
     { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
     { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
     { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
+    { id: "6c2f415f-9e8e-40b0-99a6-9b500766f739", src: mayer, alt: "mayer", name: "John Mayer Solo Tour", date: "11 de noviembre", place: "Foro sol", hour: "20:00 hrs", type: "General", seat: "N/A" },
 ]
 
 

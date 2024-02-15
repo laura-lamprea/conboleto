@@ -27,7 +27,7 @@ function ChangePassword() {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<div className="w-[601px]">
+			<div className="w-[250px] sm:w-[450px] md:w-[601px]">
 				<div className="relative inset-y-0 right-0 flex items-center text-sm leading-5">
 					<input
 						id="password"
@@ -106,7 +106,7 @@ function ChangePassword() {
 				)}
 			</div>
 			<div className="flex justify-end">
-				<button className="h-9 mt-[51px] w-[118px] text-sm font-bold bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
+				<button className="h-9 mt-[51px] w-full sm:w-[118px] text-sm font-bold bg-rose-600 rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]">
 					Guardar
 				</button>
 			</div>

@@ -2,8 +2,8 @@ import { BiSolidCameraPlus } from "react-icons/bi";
 
 const PerfilTab = () => {
 	return (
-		<div className="flex gap-6">
-			<div className="h-[446px] w-[344px] flex flex-col justify-center items-center px-[85px] bg-white shadow-xl rounded-2xl border border-neutral-200">
+		<div className="flex flex-col md:flex-row gap-6">
+			<div className="h-[380px] xl:h-[446px] w-[300px] md:w-[280px] xl:w-[344px] flex flex-col justify-center items-center px-[85px] bg-white shadow-xl rounded-2xl border border-neutral-200">
 				<div className="h-32 w-32 flex flex-col items-center justify-center text-sm bg-black opacity-50 rounded-full">
 					<BiSolidCameraPlus style={{ fontSize: "40px" }} />
 					Update photo
@@ -15,13 +15,13 @@ const PerfilTab = () => {
 					Eliminar usuario
 				</button>
 			</div>
-			<div className="h-[241px] w-[744px] px-14 py-6 bg-white shadow-xl rounded-2xl border border-neutral-200">
+			<div className="h-[380px] lg:h-[241px] w-[300px] lg:w-[500px] xl:w-[744px] px-5 lg:px-14 py-6 bg-white shadow-xl rounded-2xl border border-neutral-200">
 				<form>
-					<div className="grid grid-cols-2 justify-around w-full gap-4">
+					<div className="grid grid-cols-1 lg:grid-cols-2 justify-around w-full gap-4">
 						<div className="relative w-full">
 							<input
 								type="text"
-								className="border w-full border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
+								className="border w-full text-xs border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
 							/>
 							<label className="text-xs font-semibold px-1 pointer-events-none absolute left-3 -top-3 mb-0 origin-[0_0] truncate leading-[1.6] text-gray-500 bg-white">
 								Nombre(s)
@@ -30,7 +30,7 @@ const PerfilTab = () => {
 						<div className="relative w-full">
 							<input
 								type="text"
-								className="border w-full border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
+								className="border w-full text-xs border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
 							/>
 							<label className="text-xs font-semibold px-1 pointer-events-none absolute left-3 -top-3 mb-0 origin-[0_0] truncate leading-[1.6] text-gray-500 bg-white">
 								Email
@@ -39,7 +39,7 @@ const PerfilTab = () => {
 						<div className="relative mt-2 w-full">
 							<input
 								type="text"
-								className="border w-full border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
+								className="border w-full text-xs border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
 							/>
 							<label className="text-xs font-semibold px-1 pointer-events-none absolute left-3 -top-3 mb-0 origin-[0_0] truncate leading-[1.6] text-gray-500 bg-white">
 								Teléfono
@@ -48,7 +48,7 @@ const PerfilTab = () => {
 						<div className="relative mt-2 w-full">
 							<input
 								type="text"
-								className="border w-full border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
+								className="border w-full text-xs border-gray-400 border-opacity-20 h-[54px] rounded-lg bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-slate-200 text-gray-600"
 							/>
 							<label className="text-xs font-semibold px-1 pointer-events-none absolute left-3 -top-3 mb-0 origin-[0_0] truncate leading-[1.6] text-gray-500 bg-white">
 								Dirección

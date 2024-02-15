@@ -16,39 +16,39 @@ const UserPage = () => {
 		setActiveTab(tab);
 	};
 
-	return (
-		<>
-			<div className="w-[calc(70%)] p-14 mx-auto border-b border-gray-200 ">
-				<div className="flex gap-6 py-3">
+	return ( 
+		<div className="relative flex flex-col items-start justify-center bg-zinc-100 md:bg-white ">
+			<div className="p-5 mx-auto sm:mx-0 sm:px-14 border-b border-gray-200">
+				<div className="fixed w-full z-40 md:w-auto top-[48px] left-0 sm:top-[74px] md:relative md:top-0 flex gap-0 sm:gap-6 py-0 md:py-3 px-0 bg-white">
 					<ButtonTab
 						onClick={() => handleTabClick("perfil")}
 						isActive={activeTab === "perfil"}
 					>
-						<BiSolidIdCard style={{ fontSize: "20px" }} />
+						<BiSolidIdCard style={{ fontSize: "20px" }} className="hidden md:block" />
 						Perfil
 					</ButtonTab>
 					<ButtonTab
 						onClick={() => handleTabClick("misBoletos")}
 						isActive={activeTab === "misBoletos"}
 					>
-						<FaTicketAlt style={{ fontSize: "20px" }} />
+						<FaTicketAlt style={{ fontSize: "20px" }} className="hidden md:block"/>
 						Mis Boletos
 					</ButtonTab>
 					<ButtonTab
 						onClick={() => handleTabClick("contrasena")}
 						isActive={activeTab === "contrasena"}
 					>
-						<MdVpnKey style={{ fontSize: "20px" }} />
+						<MdVpnKey style={{ fontSize: "20px" }} className="hidden md:block" />
 						Contraseña
 					</ButtonTab>
 				</div>
-				<div className="h-[500px] mt-6">
+				<div className="h-full md:h-[500px] my-12 md:my-6 ">
 					{activeTab === "perfil" && <PerfilTab />}
 					{activeTab === "misBoletos" && <MisBoletosTab />}
 					{activeTab === "contrasena" && <ContrasenaTab />}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
@@ -57,7 +57,7 @@ export default UserPage;
 const ButtonTab = ({ children, onClick, isActive }: any) => {
 	return (
 		<button
-			className={`bg-transparent py-3 text-sm font-semibold border-b-2 flex items-center justify-center gap-2 ${
+			className={`bg-transparent px-5 md:px-0 py-2 md:py-3 text-sm font-semibold border-b-2 flex items-center justify-center gap-2 ${
 				isActive
 					? "text-gray-800 border-red-600"
 					: "text-gray-500 border-transparent"

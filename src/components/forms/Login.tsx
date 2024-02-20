@@ -36,10 +36,10 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 	};
 
 	return (
-		<div className="w-[310px] sm:w-[352px] mx-auto">
+		<div className="w-[310px] sm:w-[352px] mx-auto pr-0 sm:pr-6 2xl:pr-0">
 			<form>
 				{/* <form action={dispatch}> */}
-				<div className="mb-5">
+				<div className="mb-2 2xl:mb-5">
 					<label
 						htmlFor="email"
 						className="text-gray-500 text-xs font-semibold "
@@ -51,7 +51,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 						type="email"
 						autoComplete="username"
 						{...register("email")}
-						className="w-full h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center inline-flex"
+						className="w-full h-[54px] px-3.5 py-4 text-xs 2xl:text-sm text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center inline-flex"
 					/>
 					{errors.email?.message && (
 						<p className="text-red-600 text-sm p-1">{errors.email?.message}</p>
@@ -70,7 +70,7 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 							autoComplete="current-password"
 							type={showPassword ? "text" : "password"}
 							{...register("password")}
-							className="w-full h-[54px] px-3.5 py-4 text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center"
+							className="w-full h-[54px] px-3.5 py-4 text-xs 2xl:text-sm text-gray-800 rounded-lg border border-gray-400 border-opacity-20 justify-center items-center"
 						/>
 						<button
 							onClick={() => setShowPassword(!showPassword)}
@@ -98,20 +98,20 @@ const LoginForm = ({ setForgot }: { setForgot: Function }) => {
 				</div>
 				<button
 					onClick={() => setForgot()}
-					className="w-full h-[22px] my-4 text-right text-gray-800 text-sm font-normal font-['Public Sans'] underline leading-snug"
+					className="w-full h-[22px] my-2 2xl:my-4 text-right text-gray-800 text-xs 2xl:text-sm font-normal font-['Public Sans'] underline leading-snug"
 				>
 					¿Olvidaste tu contraseña?
 				</button>
 				<LoginButton />
 			</form>
 			{/* login with Google */}
-			<div className="inline-flex items-center my-8 justify-center w-full bg-slate-500 ">
+			<div className="inline-flex items-center my-5 2xl:my-8 justify-center w-full bg-slate-500 ">
 				<hr className="w-full h-px bg-gray-200 border-0 "></hr>
-				<span className="absolute px-3 font-medium text-gray-900 bg-white">
+				<span className="absolute px-3 text-xs lg:text-sm font-medium text-gray-900 bg-white">
 					or
 				</span>
 			</div>
-			<div className="flex justify-center space-x-3">
+			<div className="flex justify-center space-x-3 mb-2">
 				<button
 					onClick={() => signIn()}
 					className="w-[39px] h-[39px] rounded-[19.50px] border border-slate-800 flex items-center justify-center"
@@ -133,7 +133,7 @@ function LoginButton() {
 		<button
 			type="submit"
 			disabled={pending}
-			className={`h-[52px] w-full ${
+			className={`h-10 2xl:h-[52px] text-sm 2xl:text-base w-full ${
 				pending ? "bg-gray-400" : " bg-rose-600"
 			}  rounded-lg border border-white border-opacity-30 backdrop-blur-[31.80px]`}
 		>

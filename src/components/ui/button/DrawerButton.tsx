@@ -4,6 +4,7 @@ import { CgMenuLeftAlt } from "react-icons/cg";
 import { IoIosArrowBack } from "react-icons/io";
 import { useSession } from "next-auth/react";
 import { getInitials } from "@/utils/getInitials";
+import LoginButton from "@/components/ui/button/LoginButton";
 
 const DrawerButton = () => {
 	const { data: session } = useSession();
@@ -26,7 +27,7 @@ const DrawerButton = () => {
 			)}
 			<div
 				id="drawer-navigation"
-				className={`fixed top-0 left-0 bottom-0 h-screen transform ${
+				className={`fixed top-0 left-0 bottom-0 h-screen transform z-40 ${
 					openDrawer ? "translate-x-0" : "-translate-x-full"
 				} bg-white w-64 transition-transform ease-in-out duration-700`}
 				aria-labelledby="drawer-navigation-label"
@@ -47,12 +48,7 @@ const DrawerButton = () => {
 							</div>
 						</div>
 					) : (
-						<button
-							onClick={() => {}}
-							className="w-[157px] h-12 my-8 bg-rose-600 rounded-lg  backdrop-blur-[31.80px]"
-						>
-							Iniciar sesión
-						</button>
+						<LoginButton styleButtom="w-[157px] h-12 my-8 bg-rose-600 rounded-lg  backdrop-blur-[31.80px]" />
 					)}
 				</div>
 				<div className="flex">

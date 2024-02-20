@@ -8,7 +8,7 @@ export const Navbar = () => {
 	const pathname = usePathname()
 
 	return (
-		<div className="sticky top-0 z-50">
+		<div id="navbar" className="sticky top-0 z-30">
 			<NavbarTop />
 			{pathname === "/" && <NavbarBottom />}
 		</div>

@@ -7,16 +7,16 @@ import CarouselCards from "@/components/ui/carousel-cards/CarouselCards";
 
 export const PopularEvents = () => {
 	return (
-		<div className="pb-12">
-			<div className="flex px-[calc(12%)] py-7 sm:py-[38px] lg:px-[90px] min-[1700px]:px-36">
+		<div id="popular" className="md:pb-12">
+			<div className="flex items-center justify-between md:justify-start px-[calc(12%)] py-3 md:py-7 sm:py-[38px] lg:px-[90px] min-[1700px]:px-36">
 				<p
-					className={`${eventFont.className} text-rose-600 text-xl sm:text-[26px] font-normal lg:text-4xl italic`}
+					className={`${eventFont.className} text-rose-600 text-base md:text-[26px] font-normal lg:text-4xl italic`}
 				>
 					EVENTOS POPULARES
 				</p>
 				<Link
 					href={"/popular"}
-					className={`text-rose-600 text-xl ml-6 mt-1 hidden sm:block`}
+					className={`text-rose-600 text-sm md:text-xl ml-6`}
 				>
 					Ver todos
 				</Link>

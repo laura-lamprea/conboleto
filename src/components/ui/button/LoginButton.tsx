@@ -5,7 +5,7 @@ import RegisterForm from "@/components/forms/Register";
 import ForgotPasswordForm from "@/components/forms/ForgotPassword";
 import CodeSentForm from "@/components/forms/CodeSent";
 
-const LoginButtonNavbar = () => {
+const LoginButton = ({ styleButtom }: { styleButtom: string }) => {
 	const [openModal, setOpenModal] = useState<string | null>(null);
 
 	const handleOpenModal = (modalName: string | null): void => {
@@ -23,18 +23,19 @@ const LoginButtonNavbar = () => {
 				data-modal-toggle="default-modal"
 				type="button"
 				onClick={() => handleOpenModal("login")}
-				className="hidden sm:block w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-opacity-30 backdrop-blur-[31.80px]"
+				// className="hidden sm:block w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-opacity-30 backdrop-blur-[31.80px]"
+				className={styleButtom}
 			>
 				Iniciar sesión
 			</button>
 
 			{openModal === "login" && (
 				<Modal isOpen={true} handleClose={handleClose}>
-					<div className="w-full px-16 pb-7">
-						<p className="text-gray-800 text-2xl font-bold leading-9">
+					<div className="flex flex-col pb-3 2xl:pb-7">
+						<p className="text-gray-800 text-base 2xl:text-2xl font-bold leading-9">
 							Inicia sesión
 						</p>
-						<div className="text-gray-800 text-sm font-normal font-['Public Sans'] leading-snug">
+						<div className="text-gray-800 text-xs 2xl:text-sm font-normal font-['Public Sans'] leading-snug">
 							<span>¿No tienes cuenta aún? </span>
 							<button
 								data-modal-target="default-modal"
@@ -44,7 +45,7 @@ const LoginButtonNavbar = () => {
 									handleClose();
 									handleOpenModal("register");
 								}}
-								className="bg-transparent text-right text-rose-600 text-sm font-semibold font-['Public Sans'] leading-snug"
+								className="bg-transparent text-right text-rose-600 text-xs 2xl:text-sm font-semibold font-['Public Sans'] leading-snug"
 							>
 								Regístrate
 							</button>
@@ -56,11 +57,11 @@ const LoginButtonNavbar = () => {
 
 			{openModal === "register" && (
 				<Modal isOpen={true} handleClose={handleClose}>
-					<div className="w-full px-16 pb-7">
-						<p className="text-gray-800 text-2xl font-bold leading-9">
+					<div className="flex flex-col pb-3 2xl:pb-7">
+						<p className="text-gray-800 text-base 2xl:text-2xl font-bold leading-9">
 							Regístrate
 						</p>
-						<div className="text-gray-800 text-sm font-normal font-['Public Sans'] leading-snug">
+						<div className="text-gray-800 text-xs 2xl:text-sm font-normal font-['Public Sans'] leading-snug">
 							<span>¿Ya tienes una cuenta? </span>
 							<button
 								data-modal-target="default-modal"
@@ -70,7 +71,7 @@ const LoginButtonNavbar = () => {
 									handleClose();
 									handleOpenModal("login");
 								}}
-								className="bg-transparent text-right text-rose-600 text-sm font-semibold font-['Public Sans'] leading-snug"
+								className="bg-transparent text-right text-rose-600 text-xs 2xl:text-sm font-semibold font-['Public Sans'] leading-snug"
 							>
 								Inicia sesión
 							</button>
@@ -91,13 +92,11 @@ const LoginButtonNavbar = () => {
 
 			{openModal === "codeSent" && (
 				<Modal isOpen={true} handleClose={handleClose}>
-					<CodeSentForm
-						setLogin={() => handleOpenModal("login")}
-					/>
+					<CodeSentForm setLogin={() => handleOpenModal("login")} />
 				</Modal>
 			)}
 		</>
 	);
 };
 
-export default LoginButtonNavbar;
+export default LoginButton;

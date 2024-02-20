@@ -6,15 +6,19 @@ import Image from "next/image";
 
 const RequestLogin = () => {
 	return (
-		<div className="flex flex-col mx-auto my-24">
-			<Image className={"py-5"} src={logo} alt="logo" />
-			<div className="text-zinc-800 text-[22px] font-bold">
+		<div className="flex flex-col w-[310px] sm:w-[352px] mx-auto my-20 sm:my-24">
+			<Image
+				className={"py-5 h-18 w-36 sm:h-20 sm:w-[190px]"}
+				src={logo}
+				alt="logo"
+			/>
+			<div className="text-zinc-800 text-base md:text-lg xl:text-[22px] font-bold">
 				Inicia sesión para continuar
 			</div>
-			<div className="text-zinc-800 mb-5 text-base font-normal">
-				Para continuar con tu compra de boletos es <br />
-				necesario que ingreses a tu cuenta.
-			</div>
+			<p className="text-zinc-800 mb-5 text-xs md:text-sm xl:text-base font-normal tracking-tight">
+				Para continuar con tu compra de boletos es necesario que ingreses a tu
+				cuenta.
+			</p>
 			<LoginForm setForgot={() => {}} />
 		</div>
 	);

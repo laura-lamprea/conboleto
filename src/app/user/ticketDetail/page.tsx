@@ -19,7 +19,7 @@ const TicketDetailPage = () => {
 				<ImageEvent />
 			</div>
 			<div className="p-5 mx-auto sm:mx-0 sm:px-14 border-b border-gray-200">
-				<div className="fixed w-full z-40 md:w-auto top-[48px] left-0 sm:top-[74px] md:relative md:top-0 flex gap-0 sm:gap-6 py-0 md:py-3 px-0 bg-white">
+				<div className="fixed w-full z-20 md:w-auto top-[48px] left-0 sm:top-[74px] md:relative md:top-0 flex gap-0 sm:gap-6 py-0 md:py-3 px-0 bg-white">
 					<ButtonTab
 						onClick={() => handleTabClick("misBoletos")}
 						isActive={activeTab === "misBoletos"}

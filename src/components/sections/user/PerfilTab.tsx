@@ -1,13 +1,31 @@
 import { BiSolidCameraPlus } from "react-icons/bi";
+import { useSession } from "next-auth/react";
+import { FaUserCircle } from "react-icons/fa";
+import Image from "next/image";
 
 const PerfilTab = () => {
+	const { data: session } = useSession();
+
 	return (
 		<div className="flex flex-col md:flex-row gap-6">
 			<div className="h-[380px] xl:h-[446px] w-[300px] md:w-[280px] xl:w-[344px] flex flex-col justify-center items-center px-[85px] bg-white shadow-xl rounded-2xl border border-neutral-200">
-				<div className="h-32 w-32 flex flex-col items-center justify-center text-sm bg-black opacity-50 rounded-full">
-					<BiSolidCameraPlus style={{ fontSize: "40px" }} />
-					Update photo
-				</div>
+				<button className="relative hover:">
+					{session?.user?.picture ? (
+						<Image
+							src={session?.user?.picture}
+							alt="user"
+							width={128}
+							height={128}
+							className="rounded-full"
+						/>
+					) : (
+						<FaUserCircle style={{ fontSize: "130px", color: "#DE1A61" }} />
+					)}
+					<div className="overlay absolute inset-0 bg-black bg-opacity-50 rounded-full h-32 w-32 flex flex-col items-center justify-center text-sm transition duration-300 opacity-0 hover:opacity-100">
+						<BiSolidCameraPlus style={{ fontSize: "40px" }} />
+						Update photo
+					</div>
+				</button>
 				<p className="my-6 text-xs text-center text-slate-400">
 					Allowed *.jpeg, *.jpg, *.png, *.gif Max size of 3.1 MB
 				</p>

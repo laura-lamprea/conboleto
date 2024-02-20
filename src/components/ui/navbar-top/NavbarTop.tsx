@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/images/logo.png";
 import { IoSearchOutline } from "react-icons/io5";
-import LoginButton from "@/components/ui/button/LoginButtonNavbar";
+import LoginButton from "@/components/ui/button/LoginButton";
 import DrawerButton from "@/components/ui/button/DrawerButton";
 import { useSession } from "next-auth/react";
 import { getInitials } from "@/utils/getInitials";
@@ -61,7 +61,7 @@ export const NavbarTop = () => {
 						{getInitials(session?.user?.name || "AA")}
 					</button>
 				) : (
-					<LoginButton />
+					<LoginButton styleButtom="hidden sm:block w-[157px] h-12 my-8 bg-rose-600 rounded-lg border border-opacity-30 backdrop-blur-[31.80px]"/>
 				)}
 			</div>
 

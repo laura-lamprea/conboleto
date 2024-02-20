@@ -105,7 +105,7 @@ export const CarouselCards = ({ data }: { data: any }) => {
 	return (
 		<Slider
 			{...settings}
-			className="max-w-[310px] pl-12 sm:max-w-[600px] sm:pl-10 sm:ml-10 md:max-w-[660px] md:pl-16 lg:max-w-[900px] lg:pl-12 lg:ml-12 xl:max-w-[1150px] xl:pl-11 xl:ml-14 2xl:max-w-[1400px] min-[1700px]:max-w-[1700px] min-[1700px]:ml-16 min-[1700px]:pl-[76px]"
+			className="max-w-[320px] pl-12 sm:max-w-[600px] sm:pl-10 sm:ml-10 md:max-w-[660px] md:pl-16 lg:max-w-[900px] lg:pl-12 lg:ml-12 xl:max-w-[1150px] xl:pl-11 xl:ml-14 2xl:max-w-[1400px] min-[1700px]:max-w-[1700px] min-[1700px]:ml-16 min-[1700px]:pl-[76px]"
 		>
 			{data.map((item: any, index: number) => (
 				<Link href={`/${item.id}`} key={index}>

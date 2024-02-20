@@ -25,7 +25,7 @@ export const ForgotSchema = z.object({
 });
 
 export const CodeSentSchema = z.object({
-    code: z.string().array().length(6, { message: "El código debe tener 6 caracteres" }),
+    // code: z.string().array().length(6, { message: "El código debe tener 6 caracteres" }),
     password: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" }),
     passwordConfirmation: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" })
 }).refine((data) => data.password === data.passwordConfirmation, {

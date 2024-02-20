@@ -1,7 +1,6 @@
 import React, { useState, useRef, ChangeEvent, useEffect } from "react";
 
-const SixDigitCodeInput = ({ register }: { register: any }) => {
-	const [code, setCode] = useState<string[]>(["", "", "", "", "", ""]);
+const SixDigitCodeInput = ({ code, setCode }: { code: any; setCode: any }) => {
 	const [focusedIndex, setFocusedIndex] = useState<number>(0);
 	const inputRefs = Array.from({ length: 6 }, () =>
 		useRef<HTMLInputElement>(null)
@@ -13,7 +12,8 @@ const SixDigitCodeInput = ({ register }: { register: any }) => {
 	) => {
 		if (event.key === "Backspace" && index > 0 && code[index] === "") {
 			setFocusedIndex(index - 1);
-			// inputRefs[index + 1].current?.focus();
+		} else if (event.key === "ArrowRight" || event.key === " ") {
+			setFocusedIndex(index + 1);
 		}
 	};
 
@@ -28,7 +28,6 @@ const SixDigitCodeInput = ({ register }: { register: any }) => {
 			setCode(newCode);
 			if (index < 5 && value !== "") {
 				setFocusedIndex(index + 1);
-				// inputRefs[index + 1].current?.focus();
 			}
 		}
 	};
@@ -40,22 +39,22 @@ const SixDigitCodeInput = ({ register }: { register: any }) => {
 	}, [focusedIndex]);
 
 	return (
-		<div className="mt-10 flex justify-between">
-			{code.map((digit, index) => (
+		<div className="mt-5 2xl:mt-10 flex justify-between gap-2">
+			{code.map((digit: any, index: number) => (
 				<input
 					key={index}
+					onKeyDown={(e) => handleKeyDown(index, e)}
 					ref={inputRefs[index]}
-					{...register(`code.${index}`)}
 					type="text"
 					placeholder="-"
 					value={digit}
+					// {...register(`code.${index}`)}
 					onChange={(e: ChangeEvent<HTMLInputElement>) =>
 						handleChange(index, e.target.value)
 					}
-					onKeyDown={(e) => handleKeyDown(index, e)}
 					onFocus={() => handleFocus(index)}
 					maxLength={1}
-					className='w-[53.33px] h-[54px] rounded-lg border border-gray-400 border-opacity-20 text-center text-gray-800 text-sm font-normal font-["Public Sans"] leading-snug'
+					className='w-10 h-10 2xl:w-[54px] 2xl:h-[54px] rounded-lg border border-gray-400 border-opacity-20 text-center text-gray-800 text-xs 2xl:text-sm font-normal font-["Public Sans"] leading-snug'
 				/>
 			))}
 		</div>

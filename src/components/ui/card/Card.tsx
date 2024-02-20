@@ -13,7 +13,7 @@ import Image from "next/image";
 
 const Card = ({ event }: any) => {
 	return (
-		<div className="w-[260px] 2xl:w-[330px] rounded-xl bg-white shadow border border-neutral-200">
+		<div className="w-[270px] 2xl:w-[330px] rounded-xl bg-white shadow border border-neutral-200">
 			<div className="relative">
 				<Image
 					src={event.src}
@@ -31,7 +31,7 @@ const Card = ({ event }: any) => {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col justify-between h-[133px] 2xl:h-[172px] px-[22px] pt-[15px] pb-4 ">
+			<div className="flex flex-col justify-between h-[90px] md:h-[133px] 2xl:h-[172px] p-[10px] md:px-[22px] md:py-4 ">
 				<div>
 					<p className="text-zinc-800 text-lg 2xl:text-[22px] font-semibold tracking-tight">
 						{event.name}
@@ -43,7 +43,7 @@ const Card = ({ event }: any) => {
 						Auditorio Telmex
 					</p>
 				</div>
-				<p className="text-rose-600 text-sm 2xl:text-base font-bold">
+				<p className="hidden md:block text-rose-600 text-sm 2xl:text-base font-bold">
 					Desde {event.cost}
 				</p>
 			</div>

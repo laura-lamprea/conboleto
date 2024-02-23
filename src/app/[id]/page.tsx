@@ -4,13 +4,11 @@ import spotifyButton from "@/assets/images/spotify.png";
 import appleButton from "@/assets/images/apple.png";
 import youtubeButton from "@/assets/images/youtube.png";
 import mapaDefault from "@/assets/images/mapaDefault.png";
-import mayer from "@/mocks/images/mayer.png";
 import Image from "next/image";
 import Link from "next/link";
 import { FaShieldAlt, FaQrcode, FaLeaf } from "react-icons/fa";
 import { PiMoneyFill } from "react-icons/pi";
 import { SiGooglemaps } from "react-icons/si";
-
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import BuyTickets from "@/components/ui/buy-ticket/BuyTickets";
 import ImageEvent from "@/components/ui/image-event/ImageEvent";
@@ -68,7 +66,7 @@ const Detail = () => {
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
 		// googleMapsApiKey: process.env.API_KEY_GOOGLE_MAPS ?? "",
-		googleMapsApiKey: "AIzaSyA-tl41KYaH1lsZLBjM7-AP9fGfNkf9kNg" ?? "",
+		googleMapsApiKey: "AIzaSyDyejymvEt-ZasDPWc5vgFVEkGoGUZQI_c" ?? "",
 	});
 	const onLoad = (map: google.maps.Map) => {
 		// console.log("map: ", map);
@@ -80,13 +78,28 @@ const Detail = () => {
 			<div className="px-4 sm:px-[70px] py-7">
 				<div className="flex space-x-1">
 					<Link href={"/"}>
-						<Image className="h-8 w-[83px] md:h-10 md:w-[109px]" src={spotifyButton} alt="mayer" />{" "}
+						<Image
+							className="h-8 w-[83px] md:h-10 md:w-[109px]"
+							src={spotifyButton}
+							alt="spotifyButton"
+							style={{ width: "auto" }}
+						/>
 					</Link>
 					<Link href={"/"}>
-						<Image className="h-8 w-[83px] md:h-10 md:w-[109px]" src={appleButton} alt="mayer" />
+						<Image
+							className="h-8 w-[83px] md:h-10 md:w-[109px]"
+							src={appleButton}
+							alt="appleButton"
+							style={{ width: "auto" }}
+						/>
 					</Link>
 					<Link href={"/"}>
-						<Image className="h-8 w-[83px] md:h-10 md:w-[109px]" src={youtubeButton} alt="mayer" />
+						<Image
+							className="h-8 w-[83px] md:h-10 md:w-[109px]"
+							src={youtubeButton}
+							alt="youtubeButton"
+							style={{ width: "auto" }}
+						/>
 					</Link>
 				</div>
 
@@ -95,7 +108,7 @@ const Detail = () => {
 						<div className="text-zinc-800 text-xl sm:text-[32px] font-bold mt-12">
 							Mapa del evento
 						</div>
-						<Image className="mt-7" src={mapaDefault} alt="map" />
+						<Image className="mt-7" src={mapaDefault} alt="map" style={{ width: "auto" }}/>
 
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-20">
 							{labels.map((label, index: number) => (

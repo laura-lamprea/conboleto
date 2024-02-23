@@ -8,6 +8,7 @@ const Summary = () => {
 				alt="Event image"
 				className="w-[299px] h-[183px] rounded-xl"
 				src={mayer}
+				style={{ width: "auto" }}
 			/>
 			<div className="w-full flex flex-col items-left justify-between pt-2">
 				<p className=" text-zinc-800 text-base font-bold">

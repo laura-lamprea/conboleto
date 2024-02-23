@@ -9,26 +9,26 @@ const roboto400 = Roboto({ weight: "400", subsets: ["latin"] });
 
 const Footer = () => {
 	return (
-		<footer className="footer flex flex-col items-center w-full py-16 bottom-0 bg-slate-900">
-			<div className="flex text-lg sm:text-[32px] flex-wrap font-extrabold justify-center px-1">
+		<footer className="flex flex-col h-[750px] md:h-[530px] lg:h-[570px] xl:h-[600px] 2xl:h-[700px] min-[1700px]:h-[600px] items-center w-full py-7 lg:py-16 bottom-0 bg-slate-900">
+			<div className="flex text-lg lg:text-[32px] flex-wrap font-extrabold justify-center px-1">
 				CREA <span className="text-rose-600 px-1.5">TU EVENTO</span>Y VIVE LA
 				<span className="text-pink-600 px-1.5">EXPERIENCIA</span>
 				CONBOLETO
 			</div>
 
-			<button className="w-[280px] h-12 rounded-lg border-2 mt-11 border-pink-600 backdrop-blur-[31.80px]">
+			<button className="h-9 w-[150px] lg:w-[280px] lg:h-12 text-sm lg:text-xl rounded-lg border-2 mt-5 lg:mt-11 border-pink-600 backdrop-blur-[31.80px]">
 				CREAR EVENTO
 			</button>
-			<div className="flex flex-col mt-10 w-full sm:grid sm:grid-cols-2 sm:justify-items-center md:grid-cols-4 ">
+			<div className="flex flex-col mt-3 lg:mt-10 w-full sm:grid sm:grid-cols-2 sm:justify-items-center md:grid-cols-4 ">
 				{siteMap.map((item, index: number) => (
-					<div className="flex flex-col mt-4" key={index}>
-						<p className={`${roboto400.className} text-[15px] font-bold     text-center md:text-left`}>
+					<div className="flex flex-col mt-4 gap-0 lg:gap-1" key={index}>
+						<p className={`${roboto400.className} text-xs lg:text-[15px] font-bold text-center md:text-left`}>
 							{item.title}
 						</p>
 						{item.items.map((item) => (
 							<Link
 								href={item.link}
-								className={`${roboto100.className} text-[15px]    text-center md:text-left   hover:text-pink-500 cursor-pointer`}
+								className={`${roboto100.className} text-xs lg:text-[15px] text-center md:text-left hover:text-pink-300 cursor-pointer`}
 								key={item.title}
 							>
 								{item.title}
@@ -37,8 +37,8 @@ const Footer = () => {
 					</div>
 				))}
 			</div>
-			<div className="flex justify-between border-t-2 mt-[76px] w-[85%] md:w-[50%] pt-12 border-slate-800">
-				<Image src={logo} alt="conboleto_img" className="" />
+			<div className="flex justify-between items-center border-t-2 mt-10 lg:mt-[76px] w-[85%] md:w-[50%] pt-7 lg:pt-12 border-slate-800">
+				<Image src={logo} alt="conboleto_img" className="w-24 md:w-40 xl:w-48" />
 				<p className={"text-xs sm:text-sm leading-[14px] text-center"}>
 					&copy; {new Date().getFullYear()} Conboleto. All Rights Reserved.
 				</p>

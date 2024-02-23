@@ -35,6 +35,7 @@ const Modal = ({ isOpen, handleClose, children }: ModalProps) => {
 							src={logo}
 							alt="Conboleto_logo"
 							className="mb-1 mt-1 h-8 w-28 2xl:mb-4 2xl:mt-3 2xl:h-12 2xl:w-[190px] self-center"
+							style={{ width: "auto" }}
 						/>
 						{children}
 					</div>

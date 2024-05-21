@@ -1,3 +1,18 @@
+## Preview
+![2024-05-21 16 43 30 localhost d9244994f7a6](https://github.com/laura-lamprea/conboleto/assets/84552402/501e1e72-c028-42aa-b306-be3879b90188)
+![2024-05-21 16 44 26 localhost f149b2685f60](https://github.com/laura-lamprea/conboleto/assets/84552402/b09122e5-e416-4c62-9f2c-a81bbb57cf41)
+![2024-05-21 16 46 05 localhost 8209c1752f0c](https://github.com/laura-lamprea/conboleto/assets/84552402/4596cde0-f0f0-4abe-bd40-ab04d2c402ca)
+![2024-05-21 16 46 47 localhost a8c176852379](https://github.com/laura-lamprea/conboleto/assets/84552402/cc49df6c-4352-4ce5-a7d4-936f07c5ca62)
+![2024-05-21 16 47 33 localhost 1da62cd5fa85](https://github.com/laura-lamprea/conboleto/assets/84552402/93c36712-f95d-41f7-8ac6-bbc9ae055aef)
+![2024-05-21 16 48 10 localhost 10242f6de5f6](https://github.com/laura-lamprea/conboleto/assets/84552402/832fc042-918f-4356-9a2e-1e28283943bc)
+![2024-05-21 16 48 22 localhost a628a73250c0](https://github.com/laura-lamprea/conboleto/assets/84552402/c258c2d9-4c65-498e-a7a7-8373d8a583d7)
+![2024-05-21 16 49 01 localhost fb5809e8b4d1](https://github.com/laura-lamprea/conboleto/assets/84552402/271e0dec-bdbe-462b-9cb0-ce2c6eaedbf4)
+![2024-05-21 16 49 46 localhost eb947549adce](https://github.com/laura-lamprea/conboleto/assets/84552402/de25901d-fc93-4c56-a9ed-c05adc239abc)
+![2024-05-21 16 49 57 localhost 5986b534718e](https://github.com/laura-lamprea/conboleto/assets/84552402/57b2a663-de8a-4015-924f-fce3177e93e1)
+
+
+
+First, run the development server:
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
